@@ -1,0 +1,28 @@
+<h1>Cars Index</h1>
+<table>
+  <head>
+    <tr>
+      <th>Car</th>
+      <th>Type</th>
+      <th col-span= "3">Created at: </th>
+    </tr>
+  </head>
+
+  <body>
+    
+    <tr>
+    <% @car.each do |f| %>
+      <td><%= f.title %></td>
+      <td><%= f.description %></td>
+      <td><%= f.created_at %></td>
+      <td> <%= link_to 'Delete', car_path(f), method: :delete %> </td>
+      <td> <%= link_to 'Show', car_path(f) %> </td>
+      <td> <%= link_to 'Edit', edit_car_path(f) %> </td>
+
+    </tr>
+     <% end %>
+  </body>
+   
+</table>
+
+<%= link_to 'Create new', new_car_path %>
