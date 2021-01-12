@@ -15,6 +15,7 @@ class CarsController < ApplicationController
   
   def create
     @car= Car.new(permit_id)
+    @car.user= User.first
     if @car.save
     redirect_to @car
     else
