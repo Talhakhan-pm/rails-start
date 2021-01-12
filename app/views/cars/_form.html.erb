@@ -1,24 +1,37 @@
 <div class="container">
-  <% if @car.errors.any? %>
-    <h2>The following errors prevented the article from being saved</h2>
-    <ul>
-      <% @car.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-    </ul>
-  <% end %>
-<end>
-<%= form_with(model: @car, local: true) do |f| %>
-<p>
-  <%= f.label :title, "Title: " %><br/>
-  <%= f.text_field :title %>
-</p>
+    <% if @car.errors.any? %>
+      <h2>The following errors prevented the article from being saved</h2>
+      <ul>
+        <% @car.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    <% end %>
+  <div class="row justify-content-center">
+  <div class="col-10">
+  <%= form_with(model: @car, class: "shadow p-3 mb-5 bg-white rounded", local: true) do |f| %>
+  <div class="form-group row">
+    <div class="col-sm-10 ml-4" ">
 
-<p>
-  <%= f.label :description, "Description: " %><br/>
-  <%= f.text_area :description %> 
-</p>
+    <%= f.label :title, "Title: "%>
+    <%= f.text_field :title, class: "form-control shadow rounder"  %>
 
-<%= f.submit %>
+  </div>
+    </div>
+  <div class="form-group row">
+    <div class="col-sm-10 ml-4">
+    <%= f.label :description, "Description: " %><br/>
+    <%= f.text_area :description, rows: 10, class: "form-control shadow rounder"  %> 
+  </div>
+    </div>
+    <div class="form-group row justify-content-center">
+  <%=f.submit class: "btn btn-outline-warning "%>
+  
+    </div>
+    </div>
+        
+    <% end %>
 
-<% end %>
+  </div>
+  
+</div>

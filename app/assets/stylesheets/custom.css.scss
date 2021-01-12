@@ -1,0 +1,48 @@
+@import 'bootstrap/dist/css/bootstrap';
+
+.navbar {
+
+  background-color: #000000 !important;
+  
+  }
+
+  .nav-link {
+    color: white !important;
+  }
+
+  .navbar-brand{
+    float: left;
+    font-size: 1.7em;
+    color: #fff !important;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-weight: bold;
+  }
+
+  #home-container {
+    margin-top: 20px;
+    }
+
+  .jumbotron{
+    background-image: asset-url('tyler-lastovich-d0Sl3AH8Tlg-unsplash.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+  } 
+
+
+/* Other Classes for Page Styling */
+
+body {
+  background: #131414;
+  background: linear-gradient(to right, #0062E6, #33AEFF);
+}
+
+
+#container,
+#blah{
+  justify-content: center;
+  margin-left: 40%;
+
+}
