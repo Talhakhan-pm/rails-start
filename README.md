@@ -1,6 +1,6 @@
 # README
 
-Bootstrap activated!
+User table
 
 <!-- 
 Rails Start
