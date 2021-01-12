@@ -1,11 +1,16 @@
 <div class="container">
     <% if @car.errors.any? %>
-      <h2>The following errors prevented the article from being saved</h2>
-      <ul>
-        <% @car.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>The following errors prevented the article from being saved</strong>
+        <ul>
+          <% @car.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
     <% end %>
   <div class="row justify-content-center">
   <div class="col-10">

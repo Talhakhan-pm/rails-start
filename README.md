@@ -1,5 +1,8 @@
 # README
 
+Bootstrap activated!
+
+<!-- 
 Rails Start
 
 <div class="container col-10" id="home-container">
@@ -10,4 +13,4 @@ Rails Start
     <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
     <a class="btn btn-success btn-lg" href="#" role="button">Sign up!</a>
   </div>
-</div>
+</div> -->
