@@ -1,7 +1,9 @@
-<h1>Create new Car</h1>
+<h1 class="display-3 text-center">Create new Car</h1>
+<br/>
+<br/>
 
 <%= render 'form' %>
 
-<P>
-<%= link_to 'Cancel and return', cars_path %>
-</P>
+<div class="form-group row justify-content-center">
+  <%= link_to 'Cancel and return', cars_path, class: "btn btn-outline-warning mt-4"%>
+</div>
