@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  before_save {self.email= email.downcase}
+  before_save {self.username= username.downcase}
   has_many :cars
   validates :username, presence: true, 
     uniqueness: { case_sensitive: false }, length: {minimum:3, maximum:25 }
